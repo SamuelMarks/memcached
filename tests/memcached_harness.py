@@ -73,6 +73,7 @@ class MemcachedServer:
                 "-U",
                 "0",
             ]
+            + (["-u", "root"] if hasattr(os, "geteuid") and os.geteuid() == 0 else [])
             + self.extra_args
         )
 
