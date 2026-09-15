@@ -91,9 +91,10 @@ typedef int pid_t;
 #endif
 #define itoa itoa_ljust_internal
 
-/* Include POSIX signal and pthread compatibility */
+/* Include POSIX signal, pthread, and sys/uio compatibility */
 #include <posix-signal.h>
 #include <posix-pthread.h>
+#include <posix-sys-uio.h>
 
 /* Polyfill POSIX signal constants not defined in MSVC CRT */
 #ifndef SIGHUP
